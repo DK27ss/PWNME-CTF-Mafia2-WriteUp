@@ -1,2 +1,1 @@
-# PWNME-Mafia2-WriteUp
-PWNME-Mafia2-WriteUp
+# PWNME-CTF-Mafia2-WriteUp
