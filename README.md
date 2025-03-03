@@ -115,7 +115,36 @@ Once the state has been retrieved from `cast`, we can use the `python console` t
 
 ![console_entier](https://github.com/user-attachments/assets/6329a03e-f861-451e-82d7-e0dd8a243c66)
 
-we can then perform the operation with the following syntax:
+We can then perform the operation with the following syntax:
 
 ![operation](https://github.com/user-attachments/assets/d8355b0d-0d0d-4529-a0f2-0e6f9c5098e7)
+
+As we now know the value of state, we can apply the logical equation to retrieve the deterministic integer `3318773149693343723`
+
+![calcul](https://github.com/user-attachments/assets/3e102027-cd02-4fd2-81dd-a27b50b91a79)
+
+As we now know the integer, we can send a transaction with `foundry` using `cast send` and calling the `playCasino(uint)` function, supplying the retrieved integer and taking care to send a transaction of at least `0.1 ether`
+
+![cast_send](https://github.com/user-attachments/assets/414daefc-99da-4336-8f86-5d984f5f1eb9)
+
+	  function playCasino(uint number) public payable  {
+	
+	    require(msg.value >= 0.1 ether, "My brother in christ, it's pay to lose not free to play !");
+	    PRNG();
+	    if (number == state){
+	      isWinner = true;
+	    } else {
+	      isWinner = false;
+	    }
+	  }
+
+Then we can check by calling the `checkWin()` function from `cast call` if we've become a `winner`
+
+![cast_call](https://github.com/user-attachments/assets/1a2e4215-05b6-4e2a-8181-6099eea21985)
+
+We can now check that we have correctly become a winner: `01`
+
+Now that we've won, we can correctly access the `VIP page` on the `web application` and retrieve the thread, including the `flag`
+
+![FLAG](https://github.com/user-attachments/assets/445ab66c-bfc1-42a0-8a85-781e079a42cb)
 
