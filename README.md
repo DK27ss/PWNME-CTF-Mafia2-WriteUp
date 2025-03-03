@@ -67,13 +67,17 @@ In this second challenge, following Mafia1, we receive two Solidity files `Casin
 
 ![mafia2_contracts](https://github.com/user-attachments/assets/43293360-aa2d-43d3-b843-f10956e62b85)
 
-Next, we need to check that foundry has been correctly installed using forge --version. Once it has been correctly installed, we can begin
-
-![mafia2_forge_version](https://github.com/user-attachments/assets/76eb0579-ea1a-46d2-9fc7-41b086cd310b)
-
 First we need to start the instance to retrieve the necessary information such as: `UUID`, `CASINO`, `RPC`, `PRIVATE_KEY`, `PLAYER`, `SETUP`, `TARGET`
 
-![1](https://github.com/user-attachments/assets/ea52c8d8-1a3a-485d-883c-94a95254242b)
+To start the instance, let's use the generated input '14112411'.
+
+![token1](https://github.com/user-attachments/assets/62c05e14-d7e7-4edb-93f2-b7ac1055a683)
+
+Next, we need to check that foundry has been correctly installed using forge --version. Once it has been correctly installed, we can begin
+
+![1](https://github.com/user-attachments/assets/b1db8e1d-3f72-497d-87b8-244a0bd86ba1)
+
+
 
 
 
