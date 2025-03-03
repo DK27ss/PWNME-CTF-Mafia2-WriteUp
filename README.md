@@ -75,11 +75,11 @@ First we need to start the instance to retrieve the necessary information such a
 
 ![1](https://github.com/user-attachments/assets/b1db8e1d-3f72-497d-87b8-244a0bd86ba1)
 
-We need to check that foundry has been correctly installed using forge --version. Once it has been correctly installed, we can begin
+We need to check that foundry has been correctly installed using `forge --version`. Once it has been correctly installed, we can begin
 
 ![mafia2_forge_version](https://github.com/user-attachments/assets/f0bd66c3-c0dc-4b81-8465-f6c40e1fb39e)
 
-Next, our 'Casino.sol' contract is presented with the following content. By observing it, we realize that the calculation of state can be predictable due to `PRNG`
+Next, our `Casino.sol` contract is presented with the following content. By observing it, we realize that the calculation of state can be `predictable` due to `PRNG`
 
 PRNG updates the `state` function using the following operation:
 
@@ -87,7 +87,7 @@ PRNG updates the `state` function using the following operation:
         state = (multiplier * state + increment) % modulus;
       }
 
-We can therefore calculate the next state value using the values already hard-coded in the contract
+We can therefore `calculate` the `next state value` using the values already hard-coded in the contract
 
     bool public isWinner;
 
