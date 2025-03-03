@@ -67,7 +67,7 @@ In this second challenge, following Mafia1, we receive two Solidity files `Casin
 
 ![mafia2_contracts](https://github.com/user-attachments/assets/43293360-aa2d-43d3-b843-f10956e62b85)
 
-To start the instance, let's use the generated input '14112411'.
+To start the instance, let's use the generated input `14112411`
 
 ![token1](https://github.com/user-attachments/assets/62c05e14-d7e7-4edb-93f2-b7ac1055a683)
 
@@ -79,7 +79,7 @@ We need to check that foundry has been correctly installed using forge --version
 
 ![mafia2_forge_version](https://github.com/user-attachments/assets/f0bd66c3-c0dc-4b81-8465-f6c40e1fb39e)
 
-Next, our 'Casino.sol' contract is presented with the following content. By observing it, we realize that the calculation of state can be predictable due to `PRNG`.
+Next, our 'Casino.sol' contract is presented with the following content. By observing it, we realize that the calculation of state can be predictable due to `PRNG`
 
 PRNG updates the `state` function using the following operation:
 
@@ -123,7 +123,7 @@ As we now know the value of state, we can apply the logical equation to retrieve
 
 ![calcul](https://github.com/user-attachments/assets/3e102027-cd02-4fd2-81dd-a27b50b91a79)
 
-As we now know the integer, we can send a transaction with `foundry` using `cast send` and calling the `playCasino(uint)` function, supplying the retrieved integer and taking care to send a transaction of at least `0.1 ether`
+As we now know the integer, we can send a transaction with `foundry` using `cast send` and calling the `playCasino(uint)` function, supplying the retrieved integer `3318773149693343723` and taking care to send a transaction of at least `0.1 ether`
 
 ![cast_send](https://github.com/user-attachments/assets/414daefc-99da-4336-8f86-5d984f5f1eb9)
 
@@ -148,3 +148,4 @@ Now that we've won, we can correctly access the `VIP page` on the `web applicati
 
 ![FLAG](https://github.com/user-attachments/assets/445ab66c-bfc1-42a0-8a85-781e079a42cb)
 
+	Credits: John 🏴‍☠️
