@@ -125,6 +125,8 @@ As we now know the value of state, we can apply the logical equation to retrieve
 
 As we now know the integer, we can send a transaction with `foundry` using `cast send` and calling the `playCasino(uint)` function, supplying the retrieved integer `3318773149693343723` and taking care to send a transaction of at least `0.1 ether`
 
+`cast send --rpc-url $RPC --private-key $PRIVATE_KEY $TARGET "playCasino(uint)" 3318773149693343723 --value 100000000000000000`
+
 ![cast_send](https://github.com/user-attachments/assets/414daefc-99da-4336-8f86-5d984f5f1eb9)
 
 	  function playCasino(uint number) public payable  {
