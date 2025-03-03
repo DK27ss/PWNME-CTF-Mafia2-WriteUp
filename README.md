@@ -75,10 +75,42 @@ First we need to start the instance to retrieve the necessary information such a
 
 ![1](https://github.com/user-attachments/assets/b1db8e1d-3f72-497d-87b8-244a0bd86ba1)
 
-Next, we need to check that foundry has been correctly installed using forge --version. Once it has been correctly installed, we can begin
+We need to check that foundry has been correctly installed using forge --version. Once it has been correctly installed, we can begin
 
 ![mafia2_forge_version](https://github.com/user-attachments/assets/f0bd66c3-c0dc-4b81-8465-f6c40e1fb39e)
 
+Next, our 'Casino.sol' contract is presented with the following content. By observing it, we realize that the calculation of state can be predictable due to `PRNG`.
 
+PRNG updates the `state` function using the following operation:
 
+      function PRNG() private{
+        state = (multiplier * state + increment) % modulus;
+      }
 
+We can therefore calculate the next state value using the values already hard-coded in the contract
+
+    bool public isWinner;
+
+	uint256 public multiplier = 14130161972673258133;
+	uint256 public increment = 11367173177704995300;
+	uint256 public modulus = 4701930664760306055;
+    uint private state;
+
+First, we'll define the environment variables to simplify our calls.
+
+![env_var](https://github.com/user-attachments/assets/9f3db42a-a195-46e7-9fb0-e757ec77f8dc)
+
+To do this, we can use the python console to obtain the correct `uint`
+
+// Retrieve from foundry: `cast storage $TARGET 4 --rpc-url $RPC`
+
+![state](https://github.com/user-attachments/assets/ca706271-7c67-44b6-aa43-ff34c2caf3b3)
+
+![uint_state](https://github.com/user-attachments/assets/f036e829-1616-4a5b-a655-d7777aba4db5)
+
+With `0x in front`
+Once the state has been retrieved from `cast`, we can use the `python console` to retrieve the `integer`
+
+// Retrieve manually:
+
+![console_entier](https://github.com/user-attachments/assets/6329a03e-f861-451e-82d7-e0dd8a243c66)
