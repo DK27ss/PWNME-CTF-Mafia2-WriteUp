@@ -114,3 +114,8 @@ Once the state has been retrieved from `cast`, we can use the `python console` t
 // Retrieve manually:
 
 ![console_entier](https://github.com/user-attachments/assets/6329a03e-f861-451e-82d7-e0dd8a243c66)
+
+we can then perform the operation with the following syntax:
+
+![operation](https://github.com/user-attachments/assets/d8355b0d-0d0d-4529-a0f2-0e6f9c5098e7)
+
