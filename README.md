@@ -148,4 +148,4 @@ Now that we've won, we can correctly access the `VIP page` on the `web applicati
 
 ![FLAG](https://github.com/user-attachments/assets/445ab66c-bfc1-42a0-8a85-781e079a42cb)
 
-	Credits: John 🏴‍☠️
+	Credits: Johnfr15 🏴‍☠️
